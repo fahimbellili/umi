@@ -1,0 +1,4 @@
+{
+  "mongoURI": "mongodb+srv://dbUser:Password24@cluster0.ldkch.gcp.mongodb.net/umiDB",
+  "baseUrl": "http://localhost:4000"
+}

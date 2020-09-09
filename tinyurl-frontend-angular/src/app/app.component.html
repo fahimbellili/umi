@@ -1,0 +1,53 @@
+<div class="container">
+  <form #userPost="ngForm" (ngSubmit)="onSubmit(userPost)">
+    <div>
+      <label for="longUrl"> URL originale </label>
+      <input
+        id="longUrl"
+        type="text"
+        name="longUrl"
+        ngModel
+        placeholder="URL originale"
+      />
+    </div>
+
+    <div>
+      <label for="aliasUrl"> Alias </label>
+      <input
+        id="aliasUrl"
+        type="text"
+        name="aliasUrl"
+        ngModel
+        placeholder="Choisissez un alias"
+      />
+    </div>
+
+    <div>
+      <label for="expirationDate"> Date d'éxpiration </label>
+      <input
+        id="expirationDate"
+        type="text"
+        name="expirationDate"
+        ngModel
+        placeholder="Date d'expiration"
+      />
+    </div>
+
+    <button class="button" type="submit">Purchase</button>
+
+    <div>
+      <p>Votre URL est : {{ gotData.shortUrl }}</p>
+    </div>
+    <div>
+      <p>Votre Alias est : {{ gotData.aliasUrl }}</p>
+    </div>
+    <div>
+      <p>
+        La date d'expiration est :
+        {{ gotData.expirationDate | date: "dd/MM/yyyy" }}
+      </p>
+    </div>
+  </form>
+
+  <router-outlet></router-outlet>
+</div>
